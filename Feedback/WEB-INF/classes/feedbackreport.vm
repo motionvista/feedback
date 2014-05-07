@@ -1,0 +1,70 @@
+<html>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td>Dear Sir/Madam,</td>
+	</tr>
+</table>
+<br>
+<br>
+<fieldset><legend>&nbsp;<strong>Feedback</strong></legend>
+<table border="0"  cellspacing="1" width="100%" align="center">
+       <tr>
+       <td align="left"><strong> Feedback Id : </strong><strong>$feedbackResultVO.getFeedbackId()</strong></td>
+       </tr>
+       <tr>
+       <td align="left"><strong> Company : </strong>$feedbackResultVO.getCompName()</td>
+       <td align="left"><strong>Branch  : </strong> $feedbackResultVO.getBranchName()</td>
+       </tr> 
+       <tr>
+       <td align="left"><strong> Customer Name : </strong>$feedbackResultVO.getCustName()</td>
+       <td align="left"><strong>Date  : </strong>$feedbackResultVO.getCreateTime()</td>
+       </tr> 
+       <tr>
+       <td align="left"><strong>Mobile Number  : </strong>$feedbackResultVO.getMobileNo()</td>
+       <td align="left"><strong>Email Id : </strong>$feedbackResultVO.getEmailId()</td>
+       </tr>
+      <tr>
+      <td align="left"><strong>Occupation : </strong>$feedbackResultVO.getOccupation()</td>
+      <td align="left"><strong>Date of Birth : </strong> $feedbackResultVO.getDob()</td>
+      </tr>
+      <tr>
+      <td colspan="2" align="center">
+          <fieldset><legend>&nbsp;<strong>Question Ans</strong></legend>
+           <table border="0" cellspacing="1"  width="100%" bgcolor="<%=darkColor%>">
+           <tr>
+            <td width="6%">Sr No.</td>
+            <td width="61%">Question</td>
+            <td width="11%">Ans</td>
+           </tr>
+         
+             #foreach( $queans in $feedbackResultVO.getQuestionAns() )  
+   		     <tr>
+             <td width="10%" bgcolor="#FFFFFF">$velocityCount</td>
+             <td width="61%" bgcolor="#FFFFFF">$queans.getQuestion()</td>
+             <td width="11%" bgcolor="#FFFFFF">$queans.getAns()</td>
+             </tr>
+           #end
+           </table>
+         </fieldset>
+
+     </td>
+      </tr>
+      
+      <tr>
+      </tr> 
+      <tr>
+      <td align="left"><strong>Comment : </strong>$feedbackResultVO.getComment()</td>
+      </tr>
+      </table>
+      </fieldset>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <table border="0" width="100%">
+	<tr>
+		<td><strong>Note : </strong>This is system generated mail do not reply it !!!!!!!!!!</td>
+	</tr>
+</table>

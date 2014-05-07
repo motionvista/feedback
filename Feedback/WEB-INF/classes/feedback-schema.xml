@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.feedback.vo.SettingVO" table="setting">
+   <id name="Id" type="int" column="Id" >
+ 	<generator class="increment"/>
+   </id>   
+   <property name="Url">
+    <column name="url"/>
+   </property>        
+   <property name="SmsUrl">
+    <column name="SmsUrl"/>
+   </property>    
+     <property name="EmailHost">
+    <column name="EmailHost"/>
+   </property>    
+     <property name="EmailTo">
+    <column name="EmailTo"/>
+   </property>    
+     <property name="EmailFrom">
+    <column name="EmailFrom"/>
+   </property>     
+    <property name="Type">
+    <column name="Type"/>
+   </property>     
+ </class>
+
+<class name="com.feedback.vo.EmpVO" table="employee">
+   <id name="EmpId" type="int" column="emp_id" >
+ 	<generator class="increment"/>
+   </id>   
+   <property name="FirstName">
+    <column name="first_name"/>
+   </property>     
+   <property name="LastName">
+     <column name="last_name"/>
+   </property>   
+   <property name="PhoneNo">
+     <column name="phone_no"/>
+   </property>      
+   <property name="MobileNo">
+     <column name="mobile_no"/>
+   </property>      
+   <property name="EmailId">
+     <column name="email_id"/>
+   </property>     
+   <property name="Address">
+     <column name="address"/>
+   </property>   
+    <property name="CountryId">
+     <column name="country_id"/>
+   </property>
+   <property name="StateId">
+     <column name="state_id"/>
+   </property>
+   <property name="CityId">
+     <column name="city_id"/>
+   </property> 
+    <property name="Dob">
+     <column name="dob"/>
+   </property>
+   <property name="Gender">
+     <column name="gender"/>
+   </property>
+     <property name="CompId">
+     <column name="comp_id"/>
+   </property> 
+   <property name="BranchId">
+     <column name="branch_id"/>
+   </property> 
+   <property name="RoleId">
+     <column name="role_id"/>
+   </property>         
+   <property name="LoginId">
+     <column name="login_id"/>
+   </property>      
+   <property name="Password">
+     <column name="password"/>
+   </property>      
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+ </class>
+  
+<class name="com.feedback.vo.RolePermissionVO" table="role_permission">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="RoleId">
+      <column name="role_id"/>
+   </property>      
+   <property name="PermissionId">
+      <column name="permission_id"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.CountryVO" table="country">
+   <id name="CountryId" type="int" column="country_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Name">
+      <column name="name"/>
+   </property>      
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.StateVO" table="state">
+   <id name="StateId" type="int" column="state_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Name">
+      <column name="name"/>
+   </property>
+   <property name="CountryId">
+    <column name="country_id"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.CityVO" table="city">
+   <id name="CityId" type="int" column="city_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Name">
+      <column name="name"/>
+   </property>
+   <property name="StateId">
+    <column name="state_id"/>
+   </property>
+   <property name="CountryId">
+    <column name="country_id"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.CustomerVO" table="customer">
+   <id name="CustId" type="int" column="cust_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="CustName">
+      <column name="cust_name"/>
+   </property>
+   <property name="MobileNo">
+    <column name="mobile_no"/>
+   </property>
+      <property name="EmailId">
+    <column name="email_id"/>
+   </property>
+  <property name="Dob">
+    <column name="dob"/>
+   </property>
+   <property name="Age">
+    <column name="age"/>
+   </property>   
+    <property name="MaritialStatus">
+    <column name="maritial_status"/>
+   </property>
+   <property name="Occupation">
+    <column name="occupation"/>
+   </property>
+   <property name="CompId">
+    <column name="comp_id"/>
+   </property>
+    <property name="BranchId">
+    <column name="branch_id"/>
+   </property>
+    <property name="Location">
+    <column name="location"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.QuestionVO" table="question">
+   <id name="QuestionId" type="int" column="question_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Question">
+      <column name="question"/>
+   </property>
+   <property name="Type">
+    <column name="type"/>
+   </property>
+      <property name="Lable1">
+    <column name="choice1"/>
+   </property>
+    <property name="Lable2">
+    <column name="choice2"/>
+   </property>
+    <property name="Lable3">
+    <column name="choice3"/>
+   </property>
+   <property name="Lable4">
+    <column name="choice4"/>
+   </property>
+    <property name="Keyword">
+    <column name="analytics_keyword"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.FormVO" table="form_master">
+   <id name="FormId" type="int" column="form_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Name">
+      <column name="name"/>
+   </property>
+    <property name="CompId">
+      <column name="comp_id"/>
+   </property>
+    <property name="BranchId">
+      <column name="branch_id"/>
+   </property>
+   <property name="ValidFromDate">
+    <column name="valid_from_date"/>
+   </property>
+      <property name="ValidToDate">
+    <column name="valid_to_date"/>
+   </property>
+    <property name="Comment">
+    <column name="comment"/>
+   </property>
+    <property name="Audio">
+    <column name="audio"/>
+   </property>
+   <property name="Video">
+    <column name="video"/>
+   </property>
+   <property name="Draw">
+    <column name="draw"/>
+   </property>
+    <property name="Status">
+    <column name="status"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.FormQuestionVO" table="form">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="FormId">
+      <column name="form_id"/>
+   </property>
+   <property name="QuestionId">
+    <column name="question_id"/>
+   </property>
+   <property name="Question">
+      <column name="question"/>
+   </property>
+  </class>
+
+
+<class name="com.feedback.vo.CompanyVO" table="company">
+   <id name="CompId" type="int" column="comp_id" >
+ 	<generator class="increment"/>
+   </id>   
+   <property name="Name">
+    <column name="comp_name"/>
+   </property>     
+   <property name="PhoneNo1">
+     <column name="phone_no1"/>
+   </property>      
+    <property name="PhoneNo2">
+     <column name="phone_no2"/>
+   </property>      
+   <property name="EmailId">
+     <column name="email_id"/>
+   </property>     
+   <property name="Address">
+     <column name="address"/>
+   </property>   
+    <property name="CountryId">
+     <column name="country_id"/>
+   </property>
+   <property name="StateId">
+     <column name="state_id"/>
+   </property>
+   <property name="CityId">
+     <column name="city_id"/>
+   </property> 
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+ </class>
+ 
+ <class name="com.feedback.vo.BranchVO" table="branch">
+   <id name="BranchId" type="int" column="branch_id" >
+ 	<generator class="increment"/>
+   </id>   
+   <property name="Name">
+    <column name="branch_name"/>
+   </property>    
+    <property name="CompId">
+     <column name="comp_id"/>
+   </property> 
+   <property name="PhoneNo1">
+     <column name="phone_no1"/>
+   </property>      
+    <property name="PhoneNo2">
+     <column name="phone_no2"/>
+   </property>      
+   <property name="EmailId">
+     <column name="email_id"/>
+   </property>     
+   <property name="Address">
+     <column name="address"/>
+   </property>   
+    <property name="CountryId">
+     <column name="country_id"/>
+   </property>
+   <property name="StateId">
+     <column name="state_id"/>
+   </property>
+   <property name="CityId">
+     <column name="city_id"/>
+   </property> 
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+ </class>
+ 
+ 
+ <class name="com.feedback.vo.CampaignVO" table="campaign">
+   <id name="CampId" type="int" column="camp_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="CompId">
+      <column name="comp_id"/>
+   </property>
+    <property name="BranchId">
+      <column name="branch_id"/>
+   </property>
+   <property name="CampName">
+      <column name="name"/>
+   </property>
+   <property name="StartDate">
+    <column name="start_date"/>
+   </property>
+      <property name="EndDate">
+    <column name="end_date"/>
+   </property>
+    <property name="Description">
+    <column name="description"/>
+   </property>
+     <property name="EmailTemplate">
+    <column name="email_template"/>
+   </property>
+     <property name="SmsTemplate">
+    <column name="sms_template"/>
+   </property>
+    <property name="Approve">
+    <column name="approve"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.DeviceVO" table="device">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="CompId">
+      <column name="comp_id"/>
+   </property>
+   <property name="BranchId">
+    <column name="branch_id"/>
+   </property>
+    <property name="DeviceId">
+    <column name="device_id"/>
+   </property>
+    <property name="Status">
+    <column name="status"/>
+   </property>
+   <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.CustCampaignVO" table="cust_campaign">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="CustId">
+      <column name="cust_id"/>
+   </property>
+   <property name="CampId">
+    <column name="camp_id"/>
+   </property>
+   <property name="CompId">
+    <column name="comp_id"/>
+   </property>
+    <property name="BranchId">
+    <column name="branch_id"/>
+   </property>
+    <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.FeedbackVO" table="feedback_master">
+   <id name="FeedbackId" type="int" column="feedback_id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="CustId">
+      <column name="cust_id"/>
+   </property>
+   <property name="CompId">
+    <column name="comp_id"/>
+   </property>
+   <property name="BranchId">
+    <column name="branch_id"/>
+   </property>
+    <property name="Comment">
+    <column name="comment"/>
+   </property>
+    <property name="FeedbackDuration">
+    <column name="feedback_duration"/>
+   </property>
+    <property name="Flag">
+    <column name="flag"/>
+   </property>
+   <property name="PotentialEescalation">
+    <column name="potential_escalation"/>
+   </property>
+    <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+</class>
+
+<class name="com.feedback.vo.FeedbackQuestionAnsVO" table="feedback_question_ans">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="FeedbackId">
+      <column name="feedback_id"/>
+   </property>
+   <property name="QuestionId">
+    <column name="question_id"/>
+   </property>
+   <property name="Question">
+    <column name="question"/>
+   </property>
+    <property name="Ans">
+    <column name="ans"/>
+   </property>
+ </class>
+ 
+ <class name="com.feedback.vo.EmailTemplateVO" table="email_template">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Name">
+      <column name="name"/>
+   </property>
+   <property name="Subject">
+    <column name="subject"/>
+   </property>
+   <property name="Body">
+    <column name="body"/>
+   </property>
+    <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+ </class>
+ 
+ <class name="com.feedback.vo.SmsTemplateVO" table="sms_template">
+   <id name="Id" type="int" column="id" >
+ 	<generator class="increment"/>
+   </id>
+   <property name="Name">
+      <column name="name"/>
+   </property>
+   <property name="Text">
+    <column name="text"/>
+   </property>
+    <property name="CreateTime">
+     <column name="create_time"/>
+   </property>
+ </class>
+ 
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<html>
+<body>
+<table border="0" width="100%">
+	<tr>
+		<td>Dear Sir/Madam,</td>
+	</tr>
+</table>
+<br>
+<br>
+<table border="0"  bgcolor="#75B8D5" cellspacing="1" width="100%" align="center">
+	
+	<tr>
+		<td width="30%" bgcolor="#75B8D5" align="center">Company Name</td>
+		<td width="30%"  bgcolor="#75B8D5" align="center">$campaignTemplateVO.getCompName()</td>
+	</tr>
+	
+	<tr>
+		<td width="30%" bgcolor="#FFFFFF" align="center">Address</td>
+		<td width="30%"  bgcolor="#FFFFFF" align="center">$campaignTemplateVO.getCompAddress()</td>
+	</tr>
+	
+	<tr>
+		<td width="30%" bgcolor="#FFFFFF" align="center">Your Id</td>
+		<td width="30%"  bgcolor="#FFFFFF" align="center">$campaignTemplateVO.getCustomerCampaignId()</td>
+	</tr>
+	<tr>
+		<td width="30%" bgcolor="#FFFFFF" align="center">Campaign</td>
+		<td width="30%" bgcolor="#FFFFFF" align="center">$campaignTemplateVO.getCampName()
+	</tr>	
+	<tr>
+		<td width="30%" bgcolor="#FFFFFF" align="center">Start Date</td>
+		<td width="30%"  bgcolor="#FFFFFF" align="center">$campaignTemplateVO.getStartDate()</td>
+	</tr>	
+	<tr>
+		<td width="30%" bgcolor="#FFFFFF" align="center">End Date</td>
+		<td width="30%"  bgcolor="#FFFFFF" align="center">$campaignTemplateVO.getEndDate()</td>
+	</tr>
+	<tr>	
+		<td width="30%" bgcolor="#FFFFFF" align="center">Description</td>
+		<td width="30%"  bgcolor="#FFFFFF" align="center">$campaignTemplateVO.getDescription()</td>
+	</tr>
+	
+</table>
+<table border="0" width="100%">
+	<tr>
+		<td>$msg</td>
+	</tr>
+</table>
+
+</body>
+</html>
